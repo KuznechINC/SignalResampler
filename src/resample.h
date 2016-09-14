@@ -14,7 +14,6 @@
 
 #include <vector>
 
-using namespace std;
 
 void resample ( int upFactor, int downFactor, 
-  vector<double>& inputSignal, vector<double>& outputSignal );
+  std::vector<double>& inputSignal, std::vector<double>& outputSignal );

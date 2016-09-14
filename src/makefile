@@ -1,5 +1,5 @@
 CC = g++
-CFLAGS = -Wall -g
+CFLAGS = -fPIC -O3
 LDFLAGS = -L/usr/lib -lboost_program_options
 
 all: example libresample.a
