@@ -10,10 +10,7 @@
 
 #pragma once
 
-#include <boost/math/special_functions/bessel.hpp>
-
 #include <vector>
 
-
-void resample ( int upFactor, int downFactor, 
+void resample ( int upFactor, int downFactor,
   std::vector<double>& inputSignal, std::vector<double>& outputSignal );
