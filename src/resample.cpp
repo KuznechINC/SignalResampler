@@ -3,7 +3,7 @@
 #include <vector>
 #include <math.h>
 #include "upfirdn.h"
-#include "resample.h"
+#include <resample.h>
 
 using namespace std;
 
