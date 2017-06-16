@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.2)
 
 project(Resampler)
 
+if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
+	add_definitions(/D_USE_MATH_DEFINES)
+endif()
+
 find_package(Boost REQUIRED)
 
 add_library(Resampler src/resample.cpp)
@@ -9,6 +13,11 @@ target_include_directories(Resampler
         PUBLIC
         "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>"
 )
+target_include_directories(Resampler
+		PRIVATE 
+		${Boost_INCLUDE_DIRS}
+)
+
 set_property(TARGET Resampler PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 set(targets_export_name "ResamplerTargets")
